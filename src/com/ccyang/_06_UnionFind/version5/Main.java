@@ -1,15 +1,14 @@
-package com.ccyang._06_UnionFind.version4;
-
+package com.ccyang._06_UnionFind.version5;
 
 /**
- * 测试 UF1 & UF2
+ * 测试
  */
 public class Main {
 
     public static void main(String[] args) {
 
         // 测试数据规模
-        int n = 1000000;
+        int n = 5000000;
 
         // 虽然 isConnected 时间复杂度为 O(1), 但是 union 时间复杂度为 O(n)
         // 所以整体时间复杂度为 O(n^2).
@@ -27,6 +26,11 @@ public class Main {
 
         // 对于UF4来说, 其时间性能依然是O(n*h)的, h为并查集表达的树的最大高度
         // 但由于UF4能更高概率的保证树的平衡, 性能可能会和 UF3不差上下。但可以最大程度避免极端情况
-        UnionFindTestHelper.testUF4(n);
+//        UnionFindTestHelper.testUF4(n);
+
+        // 对于UF5来说, 其时间性能近乎是O(1)的
+        // 但由于UF5保证find操作查询近乎是O(1)
+        UnionFindTestHelper.testUF5(n);
     }
+
 }

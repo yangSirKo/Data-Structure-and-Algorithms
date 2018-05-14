@@ -3,7 +3,7 @@ package com.ccyang._06_UnionFind.version5;
 /**
  * 第三版的 UnionFind
  *
- * 基于 rank的优化，建议使用 rank实现并查集
+ * 基于 路径压缩的优化
  */
 public class UnionFind5 {
 
@@ -28,9 +28,16 @@ public class UnionFind5 {
     public int find(int p){
         assert count > p && p >= 0;
 
-        while(p != parent[p])
-            p = parent[p];
-        return p;
+//        while(p != parent[p]){
+//            parent[p] = parent[parent[p]];
+//            p = parent[p];
+//        }
+//        return p;
+
+        if( p != parent[p])
+            parent[p] = find(parent[p]);
+
+        return parent[p];
     }
 
     // 查看元素p和元素q是否所属一个集合

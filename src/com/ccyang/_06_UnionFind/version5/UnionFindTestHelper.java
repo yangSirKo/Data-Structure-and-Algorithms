@@ -1,8 +1,9 @@
-package com.ccyang._06_UnionFind.version4;
+package com.ccyang._06_UnionFind.version5;
 
 import com.ccyang._06_UnionFind.version1.UnionFind1;
 import com.ccyang._06_UnionFind.version2.UnionFind2;
 import com.ccyang._06_UnionFind.version3.UnionFind3;
+import com.ccyang._06_UnionFind.version4.UnionFind4;
 
 /**
  * 测试两个版本的 Union-Find
@@ -94,7 +95,7 @@ public class UnionFindTestHelper {
     }
 
     /**
-     * 测试第三版的 UnionFind
+     * 测试第四版的 UnionFind
      * @param n
      */
     public static void testUF4(int n){
@@ -118,7 +119,35 @@ public class UnionFindTestHelper {
         long endTime = System.currentTimeMillis();
 
         // 打印输出对这2n个操作的耗时
-        System.out.println("UF3, " + 2*n + " ops, " + (endTime-startTime) + "ms");
+        System.out.println("UF4, " + 2*n + " ops, " + (endTime-startTime) + "ms");
+    }
+
+    /**
+     * 测试第五版的 UnionFind
+     * @param n
+     */
+    public static void testUF5(int n){
+
+        UnionFind5 uf = new UnionFind5(n);
+
+        long startTime = System.currentTimeMillis();
+
+        // 进行n次操作, 每次随机选择两个元素进行合并操作
+        for( int i = 0 ; i < n ; i ++ ){
+            int a = (int)(Math.random()*n);
+            int b = (int)(Math.random()*n);
+            uf.unionElements(a,b);
+        }
+        // 再进行n次操作, 每次随机选择两个元素, 查询他们是否同属一个集合
+        for(int i = 0 ; i < n ; i ++ ){
+            int a = (int)(Math.random()*n);
+            int b = (int)(Math.random()*n);
+            uf.isConnected(a,b);
+        }
+        long endTime = System.currentTimeMillis();
+
+        // 打印输出对这2n个操作的耗时
+        System.out.println("UF5, " + 2*n + " ops, " + (endTime-startTime) + "ms");
     }
 
 }
