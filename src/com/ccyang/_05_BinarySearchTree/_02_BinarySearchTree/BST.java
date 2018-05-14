@@ -69,8 +69,8 @@ public class BST<Key extends Comparable<Key>, Value> {
     /**
      * 在二分搜索树中查找key对应的值。如果值不存在，则返回null
      */
-    public Node search(Key key){
-        return search(root,key);
+    public Value search(Key key){
+        return search(root,key).value;
     }
 
     /**
