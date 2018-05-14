@@ -57,7 +57,7 @@ public class UnionFind4 {
         else if(rank[pRoot] > rank[qRoot])
             parent[qRoot] = pRoot;
 
-        else{   rank[pRoot] = rank[qRoot]
+        else{ // rank[pRoot] = rank[qRoot]
             parent[pRoot] = qRoot;
             rank[qRoot] ++;
         }

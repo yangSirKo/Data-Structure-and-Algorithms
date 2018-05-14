@@ -1,4 +1,5 @@
-package com.ccyang._06_UnionFind.version3;
+package com.ccyang._06_UnionFind.version4;
+
 
 /**
  * 测试 UF1 & UF2
@@ -21,7 +22,11 @@ public class Main {
         UnionFindTestHelper.testUF2(n);
 
         // 对于UF3来说, 其时间性能依然是O(n*h)的, h为并查集表达的树的最大高度
-        // 但由于UF3能更高概率的保证树的平衡, 所以性能更优
+        // 但由于UF3能较高概率的保证树的平衡, 所以性能更优
         UnionFindTestHelper.testUF3(n);
+
+        // 对于UF4来说, 其时间性能依然是O(n*h)的, h为并查集表达的树的最大高度
+        // 但由于UF4能更高概率的保证树的平衡, 性能可能会和 UF3不差上下。但可以最大程度避免极端情况
+        UnionFindTestHelper.testUF4(n);
     }
 }
