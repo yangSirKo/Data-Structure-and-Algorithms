@@ -1,4 +1,35 @@
 package com.ccyang._06_UnionFind.version1;
 
+
+/**
+ * 测试并查集
+ */
 public class UnionFindTestHelper {
+
+    // 测试第一版的并查集，测试元素个数为 n
+    public static void testUF1(int n){
+
+        UnionFind1 uf1 = new UnionFind1(n);
+        long startTime = System.currentTimeMillis();
+
+        // 进行 n次操作，每次随机选择两个元素进行合并
+        for(int i=0; i<n; i++){
+            int a = (int) (Math.random()*n);
+            int b = (int) (Math.random()*n);
+            uf1.unionElements(a, b);
+        }
+
+        // 再次进行 n 次操作，每次随机选择两个元素，查询他们是否属于同一个集合
+        for(int i=0; i<n; i++){
+            int a = (int) (Math.random()*n);
+            int b = (int) (Math.random()*n);
+            uf1.isConnected(a,b);
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        // 输出耗时
+        System.out.println("UF1, " + 2*n +" ops, "+ (endTime-startTime) +"ms");
+    }
+
 }
