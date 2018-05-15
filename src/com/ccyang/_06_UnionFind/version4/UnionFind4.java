@@ -7,9 +7,9 @@ package com.ccyang._06_UnionFind.version4;
  */
 public class UnionFind4 {
 
-    private int[] parent;
-    private int[] rank;
-    private int count;
+    private int[] parent;  // parent[i] 表示第i个元素指向的父节点
+    private int[] rank;   // rank[i]表示以i为根的集合所表示的树的层数
+    private int count;  // 数据个数
 
     public UnionFind4(int count) {
         this.count = count;
