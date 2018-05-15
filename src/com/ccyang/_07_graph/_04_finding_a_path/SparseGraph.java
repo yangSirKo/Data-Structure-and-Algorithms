@@ -1,11 +1,11 @@
-package com.ccyang._07_graph;
+package com.ccyang._07_graph._03_DFSAndComponent;
 
 import java.util.Vector;
 
 /**
  * 基于邻接表 实现图： 邻接表适用于稀疏图
  */
-public class SparseGraph {
+public class SparseGraph implements Graph {
 
     private int n, m;    // n -> 节点数；m -> 边数
     private boolean dericted;   // 是否是无向图
@@ -27,14 +27,14 @@ public class SparseGraph {
     /**
      * @return 返回节点个数
      */
-    private int V(){
+    public int V(){
         return n;
     }
 
     /**
      * @return 返回边的个数
      */
-    private int E(){
+    public int E(){
         return m;
     }
 
@@ -55,7 +55,7 @@ public class SparseGraph {
     /**
      * 判断 节点v 和 节点w 的连通性
      */
-    public Boolean hasEdge(int v, int w) throws Exception {
+    public boolean hasEdge(int v, int w) throws Exception {
         if(!((v >= 0 && v < n) && (w >= 0 && w < n)))
             throw new Exception("图中无此节点");
 
@@ -63,5 +63,29 @@ public class SparseGraph {
             if (g[v].elementAt(i) == w)
                 return true;
         return false;
+    }
+
+    /**
+     * 显示图的信息
+     */
+    public void show(){
+        for(int i = 0; i < n; i++){
+            System.out.print("vertex " + i + "：\t");
+            for(int j=0; j < g[i].size(); j++)
+                System.out.print(g[i].elementAt(j)+ "\t");
+            System.out.println();
+        }
+    }
+
+    /**
+     * 返回图中顶点的所有临边
+     * 由于java使用引用机制，返回一个Vector不会带来额外开销,
+     */
+    public Iterable<Integer> adj(int v) throws Exception {
+
+        if(!(v >= 0 && v < n))
+            throw new Exception("图中无此节点");
+
+        return g[v];
     }
 }

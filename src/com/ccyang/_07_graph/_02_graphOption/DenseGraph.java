@@ -1,9 +1,13 @@
-package com.ccyang._07_graph;
+package com.ccyang._07_graph.graphOption;
+
+import com.sun.prism.Graphics;
+
+import java.util.Vector;
 
 /**
  * 基于 邻接矩阵 实现图： 邻接矩阵适用于稠密图
  */
-public class DenseGraph {
+public class DenseGraph implements Graph{
 
     private int n, m ;  // n -> 节点数；m -> 边数
     private boolean dericted;  // 是否是有向图, 无向图：false
@@ -53,6 +57,21 @@ public class DenseGraph {
     }
 
     /**
+     * 显示图的信息
+     */
+    public void show(){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++ ) {
+                if (g[i][j])
+                    System.out.print(1 + "\t");
+                else
+                    System.out.print(0 + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    /**
      * 判断图中是否存在 由 v 到 w 的边
      */
     public boolean hasEdge(int v, int w) throws Exception {
@@ -60,5 +79,22 @@ public class DenseGraph {
         if(!((v >= 0 && v < n) && (w >= 0 && w < n)))
             throw new Exception("图中无此节点");
         return g[v][w];
+    }
+
+    /**
+     * 返回一个顶点的所有临边
+     * java 使用引用机制，返回一个 vector 不会带来额外的开销
+     */
+    public Iterable<Integer> adj(int v) throws Exception {
+
+        if(!(v >= 0 && v < n))
+            throw new Exception("图中无此节点");
+
+        Vector<Integer> adjV = new Vector<>();
+        for (int i=0; i<n; n++){
+            if(g[v][i])  // true 表示有边
+                adjV.add(i);
+        }
+        return adjV;
     }
 }
