@@ -1,4 +1,4 @@
-package com.ccyang._07_graph.graphOption;
+package com.ccyang._07_graph._02_graphOption;
 
 /**
  * 测试 ReadGraph
@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // 使用两种图的形式存储 testG1
-        String fileName = ".\\src\\com\\ccyang\\_07_graph\\graphOption\\testG1";
+        String fileName = ".\\src\\com\\ccyang\\_07_graph\\testG1";
 
         SparseGraph sparseGraph = new SparseGraph(13, false);
         ReadGraph readGraph1 = new ReadGraph(sparseGraph, fileName);
@@ -23,7 +23,7 @@ public class Main {
         System.out.println();
 
         // 使用两种图的形式存储 testG2
-        String fileName2 = ".\\src\\com\\ccyang\\_07_graph\\graphOption\\testG2";
+        String fileName2 = ".\\src\\com\\ccyang\\_07_graph\\testG2";
 
         SparseGraph sparseGraph2 = new SparseGraph(6, false);
         ReadGraph readGraph3 = new ReadGraph(sparseGraph2, fileName2);

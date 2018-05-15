@@ -1,6 +1,4 @@
-package com.ccyang._07_graph.graphOption;
-
-import com.sun.prism.Graphics;
+package com.ccyang._07_graph._02_graphOption;
 
 import java.util.Vector;
 
