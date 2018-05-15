@@ -1,11 +1,11 @@
-package com.ccyang._07_graph._02_graphOption;
+package com.ccyang._07_graph._03_DFSAndComponent;
 
 import java.util.Vector;
 
 /**
  * 基于邻接表 实现图： 邻接表适用于稀疏图
  */
-public class SparseGraph implements Graph{
+public class SparseGraph implements Graph {
 
     private int n, m;    // n -> 节点数；m -> 边数
     private boolean dericted;   // 是否是无向图

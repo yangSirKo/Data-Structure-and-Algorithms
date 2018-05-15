@@ -1,11 +1,11 @@
-package com.ccyang._07_graph._02_graphOption;
+package com.ccyang._07_graph._03_DFSAndComponent;
 
 import java.util.Vector;
 
 /**
  * 基于 邻接矩阵 实现图： 邻接矩阵适用于稠密图
  */
-public class DenseGraph implements Graph{
+public class DenseGraph implements Graph {
 
     private int n, m ;  // n -> 节点数；m -> 边数
     private boolean dericted;  // 是否是有向图, 无向图：false
