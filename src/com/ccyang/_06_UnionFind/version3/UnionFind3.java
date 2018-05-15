@@ -7,9 +7,9 @@ package com.ccyang._06_UnionFind.version3;
  */
 public class UnionFind3 {
 
-    private int[] parent;
-    private int[] sz;
-    private int count;
+    private int[] parent;  // 表示第一个元素所指向的父节点
+    private int[] sz;   // sz[i] 表示以 i为根的集合中元素个数
+    private int count;  // 数据个数
 
     public UnionFind3(int count) {
         this.count = count;
