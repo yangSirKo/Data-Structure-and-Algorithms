@@ -1,4 +1,4 @@
-package com.ccyang._07_graph;
+package com.ccyang._07_graph._01_graph;
 
 import java.util.Vector;
 
