@@ -1,23 +1,43 @@
-package com.ccyang._07_graph._04_finding_a_path;
-
-import com.ccyang._07_graph._03_DFSAndComponent.Components;
+package com.ccyang._07_graph._05_BFS_and_Shortest_path;
 
 /**
  * 测试 ReadGraph
  */
 public class Main {
 
-    // 测试寻路算法
+    // 测试无权图最短路径算法
     public static void main(String[] args) throws Exception {
 
-        String filename = ".\\src\\com\\ccyang\\_07_graph\\testG";
+        String filename = ".\\src\\com\\ccyang\\_07_graph\\testG1";
         SparseGraph g = new SparseGraph(7, false);
         ReadGraph readGraph = new ReadGraph(g, filename);
         g.show();
+
+        // 比较使用深度优先遍历和广度优先遍历获得路径的不同
+        // 广度优先遍历获得的是无权图的最短路径
+        Path dfs = new Path(g,0);
+        System.out.print("DFS : ");
+        dfs.showPath(6);
+
+        ShortestPath bfs = new ShortestPath(g,0);
+        System.out.print("BFS : ");
+        bfs.showPath(6);
+
         System.out.println();
 
-        Path path = new Path(g,0);
-        System.out.println("Path from 0 to 6 : ");
-        path.showPath(6);
+        filename = ".\\src\\com\\ccyang\\_07_graph\\testG1";
+        SparseGraph g2 = new SparseGraph(13, false);
+        ReadGraph readGraph2 = new ReadGraph(g2, filename);
+        g2.show();
+
+        // 比较使用深度优先遍历和广度优先遍历获得路径的不同
+        // 广度优先遍历获得的是无权图的最短路径
+        Path dfs2 = new Path(g2,0);
+        System.out.print("DFS : ");
+        dfs2.showPath(3);
+
+        ShortestPath bfs2 = new ShortestPath(g,0);
+        System.out.print("BFS : ");
+        bfs.showPath(3);
     }
 }

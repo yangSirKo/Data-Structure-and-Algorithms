@@ -1,4 +1,4 @@
-package com.ccyang._07_graph._04_finding_a_path;
+package com.ccyang._07_graph._05_BFS_and_Shortest_path;
 
 import java.io.BufferedInputStream;
 import java.io.File;
