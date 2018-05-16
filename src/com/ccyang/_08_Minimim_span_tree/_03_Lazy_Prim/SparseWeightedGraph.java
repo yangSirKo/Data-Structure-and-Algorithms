@@ -1,11 +1,12 @@
-package com.ccyang._08_Minimim_span_tree._01_weight_graph;
+package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
 
 /**
  * 稀疏图 -- 邻接表
  */
+
 import java.util.ArrayList;
 
-public class SparseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight>{
+public class SparseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight> {
 
     private int n , m;  // 节点数 和 边数
     private boolean dericted;  // 是否是无向边

@@ -1,4 +1,4 @@
-package com.ccyang._08_Minimim_span_tree._01_weight_graph;
+package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
 
 import java.io.BufferedInputStream;
 import java.io.File;

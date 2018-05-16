@@ -1,6 +1,6 @@
-package com.ccyang._08_Minimim_span_tree._01_weight_graph;
+package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
 
-public class Edge<Weight extends Number & Comparable> implements Comparable<Edge>{
+public class Edge<Weight extends Number & Comparable>implements Comparable<Edge>{
 
     private int a, b;  // 边的两个端点
     private Weight weight;   // 边的权值

@@ -1,11 +1,11 @@
-package com.ccyang._08_Minimim_span_tree._01_weight_graph;
+package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
 
 import java.util.Vector;
 
 /**
  * 稠密图 -- 邻接矩阵 -- 带权图
  */
-public class DenseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight>{
+public class DenseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight> {
 
     private int n;  // 节点数
     private int m;  // 边数
