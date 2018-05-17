@@ -1,4 +1,4 @@
-package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
+package com.ccyang._08_Minimim_span_tree._05_Prim;
 
 public class Edge<Weight extends Number & Comparable>implements Comparable<Edge>{
 

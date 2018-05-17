@@ -1,4 +1,4 @@
-package com.ccyang._08_Minimim_span_tree._03_Lazy_Prim;
+package com.ccyang._08_Minimim_span_tree._05_Prim;
 
 public interface WeightedGraph<Weight extends Number & Comparable>{
 
