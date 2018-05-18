@@ -1,10 +1,9 @@
-package com.ccyang._08_Minimim_span_tree._05_Prim;
+package com.ccyang._08_Minimim_span_tree._06_Kruskal_Algorithm;
 
 
 public class Main {
 
-    // 测试我们实现的两种Prim算法的性能差距
-    // 这一节使用索引堆实现的Prim算法优于上一小节的Lazy Prim算法
+    // 比较Lazy Prim, Prim和Kruskal的时间性能
     public static void main(String[] args) {
 
         String filename1 = ".\\src\\com\\ccyang\\_08_Minimim_span_tree\\testG1";
@@ -20,23 +19,24 @@ public class Main {
         int V4 = 10000;
 
         // 文件读取
-        SparseWeightedGraph<Double> g1 = new SparseWeightedGraph<>(V1, false);
+        SparseWeightedGraph<Double> g1 = new SparseWeightedGraph<Double>(V1, false);
         ReadWeightedGraph readGraph1 = new ReadWeightedGraph(g1, filename1);
         System.out.println( filename1 + " load successfully.");
 
-        SparseWeightedGraph<Double> g2 = new SparseWeightedGraph<>(V2, false);
+        SparseWeightedGraph<Double> g2 = new SparseWeightedGraph<Double>(V2, false);
         ReadWeightedGraph readGraph2 = new ReadWeightedGraph(g2, filename2);
         System.out.println( filename2 + " load successfully.");
 
-        SparseWeightedGraph<Double> g3 = new SparseWeightedGraph<>(V3, false);
+        SparseWeightedGraph<Double> g3 = new SparseWeightedGraph<Double>(V3, false);
         ReadWeightedGraph readGraph3 = new ReadWeightedGraph(g3, filename3);
         System.out.println( filename3 + " load successfully.");
 
-        SparseWeightedGraph<Double> g4 = new SparseWeightedGraph<>(V4, false);
+        SparseWeightedGraph<Double> g4 = new SparseWeightedGraph<Double>(V4, false);
         ReadWeightedGraph readGraph4 = new ReadWeightedGraph(g4, filename4);
         System.out.println( filename4 + " load successfully.");
 
         System.out.println();
+
 
         long startTime, endTime;
 
@@ -44,22 +44,22 @@ public class Main {
         System.out.println("Test Lazy Prim MST:");
 
         startTime = System.currentTimeMillis();
-        LazyPrimMST<Double> lazyPrimMST1 = new LazyPrimMST<>(g1);
+        LazyPrimMST<Double> lazyPrimMST1 = new LazyPrimMST<Double>(g1);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G1: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        LazyPrimMST<Double> lazyPrimMST2 = new LazyPrimMST<>(g2);
+        LazyPrimMST<Double> lazyPrimMST2 = new LazyPrimMST<Double>(g2);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G2: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        LazyPrimMST<Double> lazyPrimMST3 = new LazyPrimMST<>(g3);
+        LazyPrimMST<Double> lazyPrimMST3 = new LazyPrimMST<Double>(g3);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G3: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        LazyPrimMST<Double> lazyPrimMST4 = new LazyPrimMST<>(g4);
+        LazyPrimMST<Double> lazyPrimMST4 = new LazyPrimMST<Double>(g4);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G4: " + (endTime-startTime) + "ms.");
 
@@ -69,25 +69,57 @@ public class Main {
         System.out.println("Test Prim MST:");
 
         startTime = System.currentTimeMillis();
-        PrimMST<Double> primMST1 = new PrimMST<>(g1);
+        PrimMST<Double> primMST1 = new PrimMST<Double>(g1);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G1: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        PrimMST<Double> primMST2 = new PrimMST<>(g2);
+        PrimMST<Double> primMST2 = new PrimMST<Double>(g2);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G2: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        PrimMST<Double> primMST3 = new PrimMST<>(g3);
+        PrimMST<Double> primMST3 = new PrimMST<Double>(g3);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G3: " + (endTime-startTime) + "ms.");
 
         startTime = System.currentTimeMillis();
-        PrimMST<Double> primMST4 = new PrimMST<>(g4);
+        PrimMST<Double> primMST4 = new PrimMST<Double>(g4);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G4: " + (endTime-startTime) + "ms.");
+
+//        startTime = System.currentTimeMillis();
+//        PrimMST<Double> primMST5 = new PrimMST<Double>(g5);
+//        endTime = System.currentTimeMillis();
+//        System.out.println("Test for G5: " + (endTime-startTime) + "ms.");
+
+        System.out.println();
+
+
+        // Test Kruskal MST
+        System.out.println("Test Kruskal MST:");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST1 = new KruskalMST<Double>(g1);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G1: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST2 = new KruskalMST<Double>(g2);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G2: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST3 = new KruskalMST<Double>(g3);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G3: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST4 = new KruskalMST<Double>(g4);
         endTime = System.currentTimeMillis();
         System.out.println("Test for G4: " + (endTime-startTime) + "ms.");
 
         System.out.println();
     }
+
 }
