@@ -1,11 +1,12 @@
-package com.ccyang._08_Minimim_span_tree._01_weight_graph;
+package com.ccyang._08_Minimim_span_tree._06_Kruskal_Algorithm;
 
 /**
  * 稀疏图 -- 邻接表
  */
+
 import java.util.ArrayList;
 
-public class SparseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight>{
+public class SparseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph<Weight> {
 
     private int n , m;  // 节点数 和 边数
     private boolean dericted;  // 是否是无向边
@@ -42,9 +43,9 @@ public class SparseWeightedGraph<Weight extends Number & Comparable> implements 
         // 注意, 由于在邻接表的情况, 查找是否有重边需要遍历整个链表
         // 我们的程序允许重边的出现
 
-        g[e.v()].add(e);   // n - w
+        g[e.v()].add(new Edge<>(e));
         if(!dericted && (e.v() != e.w()))
-            g[e.w()].add(new Edge<>(e.w(), e.w(), e.wt()));  // w - v
+            g[e.w()].add(new Edge<>(e));
         m ++;  // 边数 +1
     }
 
