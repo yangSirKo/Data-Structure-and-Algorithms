@@ -43,9 +43,9 @@ public class SparseWeightedGraph<Weight extends Number & Comparable> implements 
         // 注意, 由于在邻接表的情况, 查找是否有重边需要遍历整个链表
         // 我们的程序允许重边的出现
 
-        g[e.v()].add(new Edge<>(e));
+        g[e.v()].add(e);    // v - w
         if(!dericted && (e.v() != e.w()))
-            g[e.w()].add(new Edge<>(e));
+            g[e.w()].add(new Edge<>(e.w(),e.v(),e.wt()));   // w - v
         m ++;  // 边数 +1
     }
 
