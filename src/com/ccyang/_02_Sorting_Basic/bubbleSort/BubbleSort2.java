@@ -1,12 +1,11 @@
-package com.atyang.bubble;
+package com.ccyang._02_Sorting_Basic.bubbleSort;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 public class BubbleSort2 {
 
 	private BubbleSort2() {}
 
-	@SuppressWarnings({ "unchecked", "unused", "rawtypes" })
 	private static void sort(Comparable[] arr){
 		
 		int n = arr.length;
@@ -25,7 +24,6 @@ public class BubbleSort2 {
 			n = newn;
 			
 		}while(newn > 0);
-		
 	}
 	
 	
@@ -43,7 +41,7 @@ public class BubbleSort2 {
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 //		Integer[] arr = {10,9,8,3,5,6,2,1};
 		
-		SortUtil.testSort("com.atyang.bubble.BubbleSort", arr);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.bubble.BubbleSort", arr);
 //		System.out.println(Arrays.toString(arr));
 		
 	}
