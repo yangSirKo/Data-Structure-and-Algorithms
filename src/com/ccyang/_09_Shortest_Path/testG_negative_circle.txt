@@ -1,0 +1,4 @@
+package com.ccyang._09_Shortest_Path;
+
+public class testG_negative_circle {
+}
