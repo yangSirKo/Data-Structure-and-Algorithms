@@ -2,7 +2,8 @@ package com.ccyang._03_Sorting_Advance.merge_sort;
 
 import java.util.Arrays;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
+
 /**
  * 优化归并排序
  * @author 杨Sir
@@ -64,7 +65,7 @@ public class MergeSort2 {
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 //		Integer[] arr = {11,3,5,7,2,4,9,7,8,1};
 		
-		SortUtil.testSort("com.atyang.merge.MergeSort2", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.merge.MergeSort2", arr);
 		Arrays.toString(arr);
 	}
 }

@@ -2,7 +2,7 @@ package com.ccyang._03_Sorting_Advance.merge_sort;
 
 import java.util.Arrays;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 /**
  * 归并排序，时间复杂度：O( nlog(n) )
  * 
@@ -25,7 +25,7 @@ public class MergeSort {
 		
 	}
 	
-	//递归使用归并排序，对 arr[l,r]进行排序
+	//递归使用归并排序，对 arr[l,r]范围进行排序
 	@SuppressWarnings({ "rawtypes" })
 	private static void mergeSort(Comparable[] arr, int l, int r) {
 		
@@ -36,17 +36,18 @@ public class MergeSort {
 		int mid = (l+r)/2;
 		mergeSort(arr,l,mid);
 		mergeSort(arr,mid+1,r);
-		
+
 		merge(arr,l,mid,r);
 	}
 
 	//将arr[1,mid] 和  arr[mid+1,r]进行排序
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private static void merge(Comparable[] arr, int l, int mid, int r) {
-		
-		Comparable[] aux = Arrays.copyOfRange(arr,l,r+1);
 
 		//aux辅助空间中的值进行比较，插入到对应的arr的位置。
+		Comparable[] aux = Arrays.copyOfRange(arr,l,r+1);
+
+		// 初始化，i指向左半部分的起始索引位置l；j指向右半部分起始索引位置mid+1
 		int i = l, j = mid+1;
 		for(int k=l; k<=r ; k++){
 			
@@ -76,6 +77,6 @@ public class MergeSort {
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 //		Integer[] arr = {11,3,5,7,2,4,9,7,8,1};
 		
-		SortUtil.testSort("com.atyang.merge.MergeSort", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.merge.MergeSort", arr);
 	}
 }
