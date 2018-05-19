@@ -1,4 +1,4 @@
-package com.ccyang._09_Shortest_Path._03_Implementation_of_Dijkstra;
+package com.ccyang._09_Shortest_Path._05_Implementation_of_Bellman_Ford;
 
 import java.util.Vector;
 
