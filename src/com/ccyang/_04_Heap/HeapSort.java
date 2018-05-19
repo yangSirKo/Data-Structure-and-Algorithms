@@ -1,8 +1,8 @@
-package com.atyang.Heap;
+package com.ccyang._04_Heap.Heap;
 
 import java.util.Arrays;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 原地堆排序: 不使用一个额外的堆，直接在数组上进行原地排序
@@ -77,7 +77,7 @@ public class HeapSort {
 
 		int N = 1000000;
 		Integer[] arr = SortUtil.creatArray(N, 0, 1000000);
-		SortUtil.testSort("com.atyang.Heap.HeapSort", arr);
+		SortUtil.testSort("com.ccyang.Heap.HeapSort", arr);
 
 	}
 }
