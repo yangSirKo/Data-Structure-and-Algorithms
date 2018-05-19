@@ -1,8 +1,8 @@
-package com.atyang.quick;
+package com.ccyang._03_Sorting_Advance.quick_sort;
 
 import java.util.Random;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 随机化快速排序法，是对普通快速排序的改进
@@ -78,6 +78,6 @@ public class QuickSort1Random {
 //		Integer[] arr = SortUtil.creatArray(N, 0, 100);
 		
 		Integer[] arr = SortUtil.creatArray(N, 0, 1000000);
-		SortUtil.testSort("com.atyang.quick.QuickSort1Random", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.quick.QuickSort1Random", arr);
 	}
 }

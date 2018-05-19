@@ -1,13 +1,9 @@
-package com.atyang.quick;
+package com.ccyang._03_Sorting_Advance.quick_sort;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 public class QuickSort {
 
-	
-	
-	
-	@SuppressWarnings("rawtypes")
 	public static void sort(Comparable[] arr){
 		int n = arr.length;
 		quickSort(arr,0,n-1);
@@ -59,6 +55,6 @@ public class QuickSort {
 		int N = 1000000;
 		
 		Integer[] arr = SortUtil.creatArray(N, 0, 10000000);
-		SortUtil.testSort("com.atyang.quick.QuickSort", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.quick.QuickSort", arr);
 	}
 }

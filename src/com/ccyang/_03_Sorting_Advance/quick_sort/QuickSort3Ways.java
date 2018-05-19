@@ -1,8 +1,6 @@
-package com.atyang.quick;
+package com.ccyang._03_Sorting_Advance.quick_sort;
 
-import java.util.Random;
-
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 3路快排 处理 arr[l...r]， 处理重复键值的情况非常好。
@@ -86,6 +84,6 @@ public class QuickSort3Ways {
 //		Integer[] arr = SortUtil.creatArray(N, 0, 100);
 		
 		Integer[] arr = SortUtil.creatArray(N, 0, 1000000);
-		SortUtil.testSort("com.atyang.quick.QuickSort3", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.quick.QuickSort3", arr);
 	}
 }

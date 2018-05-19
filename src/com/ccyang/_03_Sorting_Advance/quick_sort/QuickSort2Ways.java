@@ -1,8 +1,8 @@
-package com.atyang.quick;
+package com.ccyang._03_Sorting_Advance.quick_sort;
 
 import java.util.Random;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 2路排序
@@ -72,6 +72,6 @@ public class QuickSort2Ways {
 //		Integer[] arr = SortUtil.creatArray(N, 0, 100);
 		
 		Integer[] arr = SortUtil.creatArray(N, 0, 1000000);
-		SortUtil.testSort("com.atyang.quick.QuickSort2Ways", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.quick.QuickSort2Ways", arr);
 	}
 }
