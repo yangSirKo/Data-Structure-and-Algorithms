@@ -1,7 +1,7 @@
-package com.atyang.selectionSort;
+package com.ccyang._02_Sorting_Basic.selectionSort;
 
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 优化选择排序
@@ -50,7 +50,7 @@ public class SelectionSort3 {
 
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 		
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort3", arr);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.selectionSort.SelectionSort3", arr);
 	}
 
 }

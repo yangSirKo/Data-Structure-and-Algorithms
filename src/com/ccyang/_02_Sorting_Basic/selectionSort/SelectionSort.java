@@ -3,7 +3,7 @@
  * date: 2018年3月19日
  * context: 
  */
-package com.atyang.selectionSort;
+package com.ccyang._02_Sorting_Basic.selectionSort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.atyang.selectionSort;
+package com.ccyang._02_Sorting_Basic.selectionSort;
 
 public class Student implements Comparable<Student> {
 

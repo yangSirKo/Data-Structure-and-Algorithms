@@ -1,6 +1,6 @@
-package com.atyang.selectionSort;
+package com.ccyang._02_Sorting_Basic.selectionSort;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 public class SelectionSort2 {
 
@@ -33,6 +33,6 @@ public class SelectionSort2 {
 		//创建长度为 20000的数组
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 		
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort2", arr);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.selectionSort.SelectionSort2", arr);
 	}
 }
