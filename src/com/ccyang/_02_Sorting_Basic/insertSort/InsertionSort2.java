@@ -1,6 +1,6 @@
-package com.atyang.insertSort;
+package com.ccyang._02_Sorting_Basic.insertSort;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 插入排序改进版  : 插入排序对于近乎有序的数组进行排序，时间复杂度可降到 O(n)
@@ -9,7 +9,6 @@ import com.atyang.util.SortUtil;
  */
 public class InsertionSort2 {
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void sort(Comparable[] arr){
 		int n = arr.length;
 		for(int i=0; i<n; i++){
@@ -53,7 +52,7 @@ public class InsertionSort2 {
 
 		int N = 20000;
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.insertSort.InsertionSort2", arr);
 	}
 
 }

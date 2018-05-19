@@ -1,8 +1,8 @@
-package com.atyang.insertSort;
+package com.ccyang._02_Sorting_Basic.insertSort;
 
 import java.util.Arrays;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 优化后 插入排序和选择排序效率比较： 插入排序效率较好
@@ -25,9 +25,9 @@ public class Insertion2_VS_Selection2 {
 		Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
 
 		System.out.println("一般测试：");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr1);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort2", arr2);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort3", arr3);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.._02_Sorting_Basic.insertSort.InsertionSort2", arr1);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.._02_Sorting_Basic.selectionSort.SelectionSort2", arr2);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.._02_Sorting_Basic.selectionSort.SelectionSort3", arr3);
 
 		System.out.println();
 
@@ -37,9 +37,9 @@ public class Insertion2_VS_Selection2 {
 		Integer[] arr6 = Arrays.copyOf(arr1, arr1.length);
 
 		System.out.println("有序性更强的测试：[0,3]");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr4);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort2", arr5);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort3", arr6);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..insertSort.InsertionSort2", arr4);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..selectionSort.SelectionSort2", arr5);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..selectionSort.SelectionSort3", arr6);
 
 		System.out.println();
 
@@ -49,9 +49,9 @@ public class Insertion2_VS_Selection2 {
 		Integer[] arr9 = Arrays.copyOf(arr1, arr1.length);
 
 		System.out.println("测试近乎有序的数组：");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr7);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort2", arr8);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort3", arr9);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..insertSort.InsertionSort2", arr7);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..selectionSort.SelectionSort2", arr8);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic..selectionSort.SelectionSort3", arr9);
 
 		System.out.println();
 

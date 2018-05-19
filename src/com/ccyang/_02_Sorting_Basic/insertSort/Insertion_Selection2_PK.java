@@ -1,8 +1,8 @@
-package com.atyang.insertSort;
+package com.ccyang._02_Sorting_Basic.insertSort;
 
 import java.util.Arrays;
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 插入排序的选择排序进行效率比较：此时插入排序可能性能略低
@@ -20,8 +20,8 @@ public class Insertion_Selection2_PK {
 		Integer[] arr = SortUtil.creatArray(N, 0, N);
 		Integer[] arr2 = Arrays.copyOf(arr,arr.length);
 		
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort", arr);
-		SortUtil.testSort("com.atyang.selectionSort.SelectionSort2", arr2);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.insertSort.InsertionSort", arr);
+		SortUtil.testSort("com.ccyang._02_Sorting_Basic.selectionSort.SelectionSort2", arr2);
 	}
 	//结果如下：
 	//InsertionSort : 870ms
