@@ -1,7 +1,7 @@
-package com.ccyang._03_Sorting_Advance.shell;
+package com.ccyang._03_Sorting_Advance.shell_sort;
 
 
-import com.atyang.util.SortUtil;
+import com.ccyang.util.SortUtil;
 
 /**
  * 希尔排序： 时间复杂度 O( log(n^(3/2)) ) 可以看做 log(n^2)
@@ -52,7 +52,7 @@ public class ShellSort {
 		Integer[] arr = SortUtil.creatArray(N, 0, 100000);
 //		Integer[] arr = {10,9,8,3,5,6,2,1,11,21,4,33,12,13,9,8,3,5,6,2,1,11,21,4,33,12,5};
 		
-		SortUtil.testSort("com.atyang.shell.ShellSort", arr);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.shell.ShellSort", arr);
 //		System.out.println(Arrays.toString(arr));
 		
 	}

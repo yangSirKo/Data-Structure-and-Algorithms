@@ -1,4 +1,4 @@
-package com.ccyang._03_Sorting_Advance.shell;
+package com.ccyang._03_Sorting_Advance.shell_sort;
 
 import java.util.Arrays;
 
@@ -21,8 +21,8 @@ public class Main {
 		Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
 		
 		System.out.println("一般测试：");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr1);
-		SortUtil.testSort("com.atyang.shell.ShellSort", arr2);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.insertSort.InsertionSort2", arr1);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.shell.ShellSort", arr2);
 		
 		System.out.println();
 
@@ -31,8 +31,8 @@ public class Main {
 		Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
 		
 		System.out.println("有序性更强的测试：[0,3]");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr3);
-		SortUtil.testSort("com.atyang.shell.ShellSort", arr4);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.insertSort.InsertionSort2", arr3);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.shell.ShellSort", arr4);
 		
 		System.out.println();
 
@@ -41,13 +41,9 @@ public class Main {
 		Integer[] arr6 = Arrays.copyOf(arr1, arr1.length);
 		
 		System.out.println("测试近乎有序的数组：");
-		SortUtil.testSort("com.atyang.insertSort.InsertionSort2", arr5);
-		SortUtil.testSort("com.atyang.shell.ShellSort", arr6);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.insertSort.InsertionSort2", arr5);
+		SortUtil.testSort("com.ccyang._03_Sorting_Advance.shell.ShellSort", arr6);
 		
 		System.out.println();
-
-		
-		
 	}
-
 }
