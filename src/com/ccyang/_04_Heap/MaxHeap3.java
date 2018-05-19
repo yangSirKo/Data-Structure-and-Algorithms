@@ -1,4 +1,4 @@
-package com.ccyang._04_Heap.Heap;
+package com.ccyang._04_Heap;
 
 
 /**
@@ -54,7 +54,6 @@ public class MaxHeap3<Item extends Comparable> {
 	
 	/**
 	 * 堆中是否是空堆
-	 * @param args
 	 */
 	public boolean isEmpty(){
 		return count == 0;
@@ -62,7 +61,6 @@ public class MaxHeap3<Item extends Comparable> {
 	
 	/**
 	 * 插入元素
-	 * @param args
 	 */
 	public void insert(Item item){
 		
@@ -113,7 +111,6 @@ public class MaxHeap3<Item extends Comparable> {
 
 	/**
 	 * 最大堆核心辅助函数	
-	 * @param count2
 	 */
 	@SuppressWarnings("unchecked")
 	private void shiftUp(int k) {

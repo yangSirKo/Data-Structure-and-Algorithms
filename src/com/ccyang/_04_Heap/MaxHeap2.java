@@ -1,6 +1,4 @@
-package com.ccyang._04_Heap.Heap;
-
-import com.ccyang.util.SortUtil;
+package com.ccyang._04_Heap;
 
 /**
  * 

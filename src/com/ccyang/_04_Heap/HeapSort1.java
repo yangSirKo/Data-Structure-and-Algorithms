@@ -1,6 +1,4 @@
-package com.ccyang._04_Heap.Heap;
-
-import java.util.Arrays;
+package com.ccyang._04_Heap;
 
 import com.ccyang.util.SortUtil;
 
@@ -44,7 +42,7 @@ public class HeapSort1{
 		
 		int N = 1000000;
 		Integer[] arr = SortUtil.creatArray(N, 0,1000000);
-		SortUtil.testSort("com.ccyang.Heap.HeapSort1", arr);
+		SortUtil.testSort("com.ccyang._04_Heap.HeapSort1", arr);
 	}
 	
 	

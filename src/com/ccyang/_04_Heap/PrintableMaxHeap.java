@@ -1,4 +1,4 @@
-package com.ccyang._04_Heap.Heap;
+package com.ccyang._04_Heap;
 
 // 我们的PrintableMaxHeap只能处理整数信息，所以继承的是MaxHeap<Comparable<Integer>>
 public class PrintableMaxHeap extends MaxHeap2<Comparable<Integer>>{

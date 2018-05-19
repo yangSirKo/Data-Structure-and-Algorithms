@@ -1,4 +1,4 @@
-package com.ccyang._04_Heap.Heap;
+package com.ccyang._04_Heap;
 /**
  * 最大堆
  * @author 杨Sir
