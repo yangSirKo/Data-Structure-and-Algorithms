@@ -1,4 +1,4 @@
-package com.ccyang._08_Minimim_span_tree._06_Kruskal_Algorithm;
+package com.ccyang._09_Shortest_Path._03_Implementation_of_Dijkstra;
 
 /**
  * 最小索引堆
@@ -83,7 +83,6 @@ public class IndexMinHeap<Item extends Comparable> {
         reverse[indexes[count]] = 0;
         count --;
         shiftDown(1);
-
         return ret;
     }
 

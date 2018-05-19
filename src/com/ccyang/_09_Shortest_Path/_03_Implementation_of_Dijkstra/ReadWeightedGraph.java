@@ -1,4 +1,4 @@
-package com.ccyang._08_Minimim_span_tree._06_Kruskal_Algorithm;
+package com.ccyang._09_Shortest_Path._03_Implementation_of_Dijkstra;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -14,8 +14,8 @@ public class ReadWeightedGraph{
 
     private Scanner scanner;
 
-    // 由于文件格式的限制，我们的文件读取类只能读取权值为Double类型的图
-    public ReadWeightedGraph(WeightedGraph<Double> graph, String filename){
+    // 由于文件格式的限制，我们的文件读取类只能读取权值为Integer类型的图
+    public ReadWeightedGraph(WeightedGraph<Integer> graph, String filename){
 
         readFile(filename);
 
@@ -35,7 +35,7 @@ public class ReadWeightedGraph{
                 Double weight = scanner.nextDouble();
                 assert v >= 0 && v < V;
                 assert w >= 0 && w < V;
-                graph.addEdge(new Edge<>(v, w, weight));
+                graph.addEdge(new Edge(v, w, weight));
             }
         }
         catch (InputMismatchException e) {
